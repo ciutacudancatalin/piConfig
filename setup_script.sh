@@ -20,6 +20,7 @@ sudo apt install autoconf libtool libdaemon-dev libasound2-dev libpopt-dev libco
 
 #enable airplay service
 sudo systemctl enable shairport-sync;
+sudo service shairport-sync start
 
 #navigate to home
 cd /home/catalin;
