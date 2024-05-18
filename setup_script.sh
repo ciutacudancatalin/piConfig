@@ -29,12 +29,13 @@ cd /home/catalin;
 mkdir cooler;
 cd cooler;
 
-#copy cooler(pimoroni-fanshim) repo and navigate to it
+#copy cooler(pimoroni-fanshim) repo and navigate to it IT DOES NOT WORK FOR UBUNTU SERVERRRRRRRR WHHYYYYY
 git clone https://github.com/pimoroni/fanshim-python;
 cd fanshim-python;
 
 #install cooler software
-sudo apt-get install python3-pip;
+sudo apt-get install python3 -y;
+sudo apt-get install python3-pip -y;
 sudo ./install.sh;
 cd examples;
 sudo ./install-service.sh --off-threshold 55 --on-threshold 75 --low-temp 55 --high-temp 75 --preempt --noled --nobutton;
