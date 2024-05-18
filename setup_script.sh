@@ -2,6 +2,7 @@
 sudo apt-get update -y ; sudo apt-get upgrade -y;
 
 #create folder for airplay in /home/user and navigate to it
+cd /home/catalin;
 mkdir airplay;
 cd airplay;
 
