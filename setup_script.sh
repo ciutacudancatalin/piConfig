@@ -16,7 +16,13 @@ git clone https://github.com/mikebrady/shairport-sync.git;
 cd shairport-sync;
 
 #setup airplay using shairplay
-sudo apt install autoconf libtool libdaemon-dev libasound2-dev libpopt-dev libconfig-dev -y ; sudo apt install avahi-daemon libavahi-client-dev -y ; sudo apt install libssl-dev -y;  autoreconf -i -f ; ./configure --with-alsa --with-avahi --with-ssl=openssl --with-systemd --with-metadata; make;sudo make install
+sudo apt install autoconf libtool libdaemon-dev libasound2-dev libpopt-dev libconfig-dev -y ;
+sudo apt install avahi-daemon libavahi-client-dev -y ; 
+sudo apt install libssl-dev -y;  
+sudo autoreconf -i -f ; 
+sudo ./configure --with-alsa --with-avahi --with-ssl=openssl --with-systemd --with-metadata; 
+sudo make;
+sudo make install
 
 #enable airplay service
 sudo systemctl enable shairport-sync;
@@ -38,7 +44,7 @@ sudo apt-get install python3 -y;
 sudo apt-get install python3-pip -y;
 sudo ./install.sh;
 cd examples;
-sudo ./install-service.sh --off-threshold 55 --on-threshold 75 --low-temp 55 --high-temp 75 --preempt --noled --nobutton;
+sudo ./install-service.sh --off-threshold 45 --on-threshold 65 --low-temp 45 --high-temp 65 --preempt --noled --nobutton;
 sudo systemctl enable pimoroni-fanshim.service;
 
 #navigate to /home/user
